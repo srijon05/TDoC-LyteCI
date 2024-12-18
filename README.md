@@ -1,0 +1,2 @@
+# TDoC-LyteCI
+LyteCI is a lightweight version of Jenkins designed to automate the build and test process and serve as a continuous integration engine. Its custom commands feature makes LyteCI modular, enabling it to integrate seamlessly with various projects. By generating detailed logs that indicate the success or failure of builds and tests, LyteCI provides a solid foundation for continuous integration, paving the way for the future development of a comprehensive CI/CD pipeline.
