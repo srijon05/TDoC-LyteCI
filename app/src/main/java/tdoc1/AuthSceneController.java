@@ -14,10 +14,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
@@ -68,7 +71,7 @@ public class AuthSceneController {
             JsonArray repos = fetchRepos(username);
 
             if(repos.size() > 0){
-                System.out.println("username");
+                System.out.println(username);
                 showRepos(repos);
             }
             else{
@@ -112,6 +115,22 @@ public class AuthSceneController {
             names.add(reponame);
         }
         Globals.repoNames = names;
+        
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("RepoScene.fxml"));
+            Parent repoSceneRoot = loader.load();
+
+            RepoSceneController repoSceneController = loader.getController();
+            repoSceneController.initialize();
+            Scene repoScene = new Scene(repoSceneRoot);
+            mainWindow.setScene(repoScene);
+            mainWindow.setTitle("Repositories");
+            mainWindow.show();
+
+        } catch (Exception e) {
+            // TODO: handle exception
+            e.printStackTrace();
+        }
     }
 
 }
