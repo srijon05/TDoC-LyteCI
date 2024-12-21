@@ -74,7 +74,7 @@ public class RepoSceneController {
             Parent nextSceneRoot = loader.load();
             Stage mainWindow = (Stage) heading.getScene().getWindow();
             BuildSceneController controller = loader.getController();
-
+            controller.initializerepo();
             Scene nextScene = new Scene(nextSceneRoot);
             mainWindow.setScene(nextScene);
             mainWindow.setTitle("Clone-Build");
