@@ -52,7 +52,7 @@ public class RepoSceneController {
     @FXML
     void backButtonAction(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("AuthScene"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("AuthScene.fxml"));
             Parent prevSceneRoot = loader.load();
             Stage mainWindow = (Stage) heading.getScene().getWindow();
             AuthSceneController controller = loader.getController();
