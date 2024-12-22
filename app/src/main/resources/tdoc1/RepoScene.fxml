@@ -9,7 +9,10 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tdoc1.RepoSceneController">
    <children>
-      <Label fx:id="welcomeLabel" prefHeight="54.0" prefWidth="600.0" style="-fx-background-color: rgb(34, 151, 153); -fx-border-color: white;" />
+      <Label fx:id="welcomeLabel" prefHeight="54.0" prefWidth="600.0" style="-fx-background-color: rgb(34, 151, 153); -fx-border-color: white; -fx-alignment: center;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font></Label>
       <Label fx:id="heading" prefHeight="51.0" prefWidth="600.0" style="-fx-alignment: center; -fx-background-color: rgb(72, 207, 203);" text="Select a Repository">
          <font>
             <Font name="System Bold" size="25.0" />
